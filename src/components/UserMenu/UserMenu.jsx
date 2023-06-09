@@ -4,14 +4,18 @@ import { selectUser } from 'redux/selectors';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
+
   const user = useSelector(selectUser);
+  console.log(user);
 
   return (
     <div>
-      <p>Welcome, {user.name}</p>
+      <p>Welcome, _ </p>
       <button type="button" onClick={() => dispatch(logOut())}>
         Log Out
       </button>
     </div>
   );
 };
+
+// Welcome, {user.name}

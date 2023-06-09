@@ -37,7 +37,7 @@ export const ContactsList = () => {
       )}
 
       {!contactsToShow?.length && !error && !isLoading && (
-        <ErrorMsg>There are no available contacts in the Phonebook.</ErrorMsg>
+        <ErrorMsg>There are no contacts in your Phonebook.</ErrorMsg>
       )}
 
       {error && <ErrorMsg>{error}</ErrorMsg>}
