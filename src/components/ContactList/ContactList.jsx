@@ -7,7 +7,7 @@ import {
   selectStatusPending,
 } from 'redux/selectors';
 import { useEffect } from 'react';
-import { getContactsThunk } from 'redux/contacts/contactsOperations';
+import { getContacts } from 'redux/contacts/contactsOperations';
 import Loader from 'components/Loader/Loader';
 
 export const ContactsList = () => {
@@ -18,7 +18,7 @@ export const ContactsList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContactsThunk());
+    dispatch(getContacts());
   }, [dispatch]);
 
   return (

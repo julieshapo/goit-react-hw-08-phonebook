@@ -1,8 +1,9 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactsList } from 'components/ContactList/ContactList';
+import { Filter } from 'components/Filter/Filter';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContactsThunk } from 'redux/contacts/contactsOperations';
+import { getContacts } from 'redux/contacts/contactsOperations';
 import { selectStatusPending } from 'redux/selectors';
 
 const Contacts = () => {
@@ -10,13 +11,14 @@ const Contacts = () => {
   const isLoading = useSelector(selectStatusPending);
 
   useEffect(() => {
-    dispatch(getContactsThunk());
+    dispatch(getContacts());
   }, [dispatch]);
 
   return (
     <div>
       <title>Your PhoneBook</title>
       <ContactForm />
+      <Filter />
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactsList />
     </div>

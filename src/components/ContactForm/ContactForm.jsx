@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { createContactThunk } from '../../redux/contacts/contactsOperations';
+import { createContact } from '../../redux/contacts/contactsOperations';
 import toast from 'react-hot-toast';
 
 import { Formik } from 'formik';
@@ -44,7 +44,7 @@ export const ContactForm = () => {
             toast.error(`${values.name} is already in contacts.`);
             return;
           }
-          dispatch(createContactThunk(values, values.name));
+          dispatch(createContact(values, values.name));
           actions.resetForm();
         }}
       >
