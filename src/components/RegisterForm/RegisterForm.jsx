@@ -1,8 +1,16 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { register } from 'redux/auth/authOperations';
 import * as Yup from 'yup';
+import {
+  Form,
+  Label,
+  Field,
+  ErrorMessage,
+  Button,
+  Title,
+} from './RegisterForm.styled';
 
 const RegistrationScheme = Yup.object({
   name: Yup.string()
@@ -21,7 +29,7 @@ export const RegisterForm = () => {
 
   return (
     <div>
-      <h2>Registration form</h2>
+      <Title>Registration form</Title>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
         validationSchema={RegistrationScheme}
@@ -31,21 +39,21 @@ export const RegisterForm = () => {
         }}
       >
         <Form autoComplete="off">
-          <label>
+          <Label>
             Username
             <Field type="text" name="name" placeholder="John" />
             <ErrorMessage name="name" component="span" />
-          </label>
-          <label>
+          </Label>
+          <Label>
             Email
             <Field type="email" name="email" placeholder="john@gmail.com" />
             <ErrorMessage name="email" component="span" />
-          </label>
-          <label>
+          </Label>
+          <Label>
             <Field type="password" name="password" placeholder="********" />
             <ErrorMessage name="password" component="span" />
-          </label>
-          <button type="submit">Register</button>
+          </Label>
+          <Button type="submit">Register</Button>
         </Form>
       </Formik>
 

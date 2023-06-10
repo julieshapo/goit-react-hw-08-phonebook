@@ -39,6 +39,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   font-weight: 700;
   color: ${p => p.theme.colors.orange};
+  margin-bottom: 30px;
 
   :hover {
     background-color: ${p => p.theme.colors.orange};

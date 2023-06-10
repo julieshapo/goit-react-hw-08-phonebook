@@ -1,8 +1,16 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { register } from 'redux/auth/authOperations';
 import * as Yup from 'yup';
+import {
+  Form,
+  Label,
+  ErrorMessage,
+  Field,
+  Button,
+  Title,
+} from './LoginForm.styled';
 
 const LogInScheme = Yup.object({
   email: Yup.string().email('Invalid email address').required('Required'),
@@ -17,7 +25,7 @@ export const LoginForm = () => {
 
   return (
     <div>
-      <h2>Log In form</h2>
+      <Title>Log In form</Title>
       <Formik
         initialValues={{ email: '', password: '' }}
         validationSchema={LogInScheme}
@@ -27,16 +35,17 @@ export const LoginForm = () => {
         }}
       >
         <Form autoComplete="off">
-          <label>
+          <Label>
             Email
             <Field type="email" name="email" placeholder="john@gmail.com" />
             <ErrorMessage name="email" component="span" />
-          </label>
-          <label>
+          </Label>
+          <Label>
+            Password
             <Field type="password" name="password" placeholder="********" />
             <ErrorMessage name="password" component="span" />
-          </label>
-          <button type="submit">Log In</button>
+          </Label>
+          <Button type="submit">Log In</Button>
         </Form>
       </Formik>
 
