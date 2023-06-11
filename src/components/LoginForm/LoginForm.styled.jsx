@@ -39,7 +39,7 @@ export const Button = styled.button`
   color: ${p => p.theme.colors.orange};
   background-color: ${p => p.theme.colors.white};
   margin-bottom: 30px;
-  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background-color: ${p => p.theme.colors.orange};
@@ -65,7 +65,7 @@ export const Link = styled(StyledLink)`
   font-weight: 700;
   color: ${p => p.theme.colors.orange};
   margin-left: 10px;
-  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background-color: ${p => p.theme.colors.orange};
