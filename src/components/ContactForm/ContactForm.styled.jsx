@@ -48,6 +48,6 @@ export const Button = styled.button`
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
-    border: 1px solid ${p => p.theme.colors.gray};
+    border: 1px solid ${p => p.theme.colors.white};
   }
 `;

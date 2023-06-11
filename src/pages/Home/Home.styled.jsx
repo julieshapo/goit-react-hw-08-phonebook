@@ -22,7 +22,7 @@ export const Link = styled(StyledLink)`
   color: #2a363b;
 
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
@@ -33,6 +33,6 @@ export const Link = styled(StyledLink)`
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
-    border: 1px solid ${p => p.theme.colors.gray};
+    border: 1px solid ${p => p.theme.colors.white};
   }
 `;

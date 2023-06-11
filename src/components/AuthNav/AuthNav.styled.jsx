@@ -7,4 +7,9 @@ export const NavLink = styled(StyledLink)`
   padding: 12px;
   font-weight: 700;
   color: #2a363b;
+
+  &:hover,
+  :focus {
+    color: ${p => p.theme.colors.orange};
+  }
 `;
