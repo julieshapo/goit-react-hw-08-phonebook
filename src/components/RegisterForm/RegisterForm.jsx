@@ -1,6 +1,5 @@
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { register } from 'redux/auth/authOperations';
 import * as Yup from 'yup';
 import {
@@ -10,6 +9,7 @@ import {
   ErrorMessage,
   Button,
   Title,
+  Link,
 } from './RegisterForm.styled';
 
 const RegistrationScheme = Yup.object({

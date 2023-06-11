@@ -13,6 +13,7 @@ export const Form = styled(FormikForm)`
   max-width: 400px;
   padding: 8px;
   border: 1px solid #2a2a2a;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -38,10 +39,12 @@ export const Button = styled.button`
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
+  padding: 8px;
   color: ${p => p.theme.colors.orange};
+  background-color: ${p => p.theme.colors.white};
   margin-bottom: 30px;
 
-  :hover {
+  &:hover {
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);

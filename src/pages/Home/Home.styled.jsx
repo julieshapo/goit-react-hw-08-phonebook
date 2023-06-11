@@ -1,32 +1,34 @@
 import styled from 'styled-components';
+import { Link as StyledLink } from 'react-router-dom';
 
-export const ContactItem = styled.div`
+export const Title = styled.h1`
+  text-align: center;
+  padding-top: 60px;
+`;
+
+export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 10px;
+  justify-content: center;
+  gap: 30px;
 `;
 
-export const Name = styled.div`
+export const Link = styled(StyledLink)`
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px;
+  font-weight: 700;
+  color: #2a363b;
+
   font-size: 14px;
-
-  @media screen and (min-width: 420px) {
-    font-size: 16px;
-  }
-
-  @media screen and (min-width: 620px) {
-    font-size: 18px;
-  }
-`;
-
-export const Button = styled.button`
-  font-size: 14px;
-  height: 24px;
   border-radius: 2px;
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
   color: ${p => p.theme.colors.orange};
+  margin-bottom: 30px;
+
   &:hover {
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};

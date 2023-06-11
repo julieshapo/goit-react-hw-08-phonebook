@@ -7,6 +7,7 @@ import { persistor, store } from 'redux/store';
 import { GlobalStyle } from '../src/components/GlobalStyles';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
+import Loader from 'components/Loader/Loader';
 
 const theme = {
   colors: {
@@ -27,9 +28,9 @@ const theme = {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={<Loader />} persistor={persistor}>
         <ThemeProvider theme={theme}>
-          <BrowserRouter>
+          <BrowserRouter basename="/goit-react-hw-08-phonebook">
             <App />
           </BrowserRouter>
         </ThemeProvider>

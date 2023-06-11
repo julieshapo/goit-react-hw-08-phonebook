@@ -7,23 +7,23 @@ import {
 import { contactsInitialState } from './contactsInitialState';
 
 const handlePending = state => {
-  state.status = 'pending';
+  state.isLoading = true;
 };
 
 const handleFulfilledGet = (state, action) => {
-  state.status = 'fulfilled';
+  state.isLoading = false;
   state.contacts = action.payload;
   state.error = '';
 };
 
 const handleFulfilledCreate = (state, action) => {
-  state.status = 'fulfilled';
+  state.isLoading = false;
   state.contacts.push(action.payload);
   state.error = '';
 };
 
 const handleFulfilledDelete = (state, action) => {
-  state.status = 'fulfilled';
+  state.isLoading = false;
   state.contacts = state.contacts.filter(
     contact => contact.id !== action.payload.id
   );
@@ -31,7 +31,7 @@ const handleFulfilledDelete = (state, action) => {
 };
 
 const handleRejected = (state, action) => {
-  state.status = 'rejected';
+  state.isLoading = false;
   state.error = action.payload;
 };
 

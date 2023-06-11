@@ -1,17 +1,25 @@
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Title, Link, Wrapper } from './Home.styled';
+import { selectIsLoggedIn } from 'redux/selectors';
 
 const Home = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
-    <div>
-      <h1>
-        Welcome to the Contactbook
+    <>
+      <Title>
+        Welcome to the ContactBook
         <span role="img" aria-label="Greeting icon">
-          💁‍♀️
+          📳
         </span>
-        <Link to="/register">Register</Link>
-        <Link to="/login">Log In</Link>
-      </h1>
-    </div>
+      </Title>
+      {!isLoggedIn && (
+        <Wrapper>
+          <Link to="/register">Register</Link>
+          <Link to="/login">Log In</Link>
+        </Wrapper>
+      )}
+    </>
   );
 };
 

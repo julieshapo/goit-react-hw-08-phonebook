@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   selectContactsToShow,
   selectError,
-  selectStatusPending,
+  selectIsLoading,
 } from 'redux/selectors';
 import { useEffect } from 'react';
 import { getContacts } from 'redux/contacts/contactsOperations';
@@ -12,7 +12,7 @@ import Loader from 'components/Loader/Loader';
 
 export const ContactsList = () => {
   const contactsToShow = useSelector(selectContactsToShow);
-  const isLoading = useSelector(selectStatusPending);
+  const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
   const dispatch = useDispatch();

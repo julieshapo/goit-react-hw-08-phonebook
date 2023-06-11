@@ -1,32 +1,25 @@
 import styled from 'styled-components';
 
-export const ContactItem = styled.div`
+export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 12px;
 `;
 
-export const Name = styled.div`
-  font-size: 14px;
-
-  @media screen and (min-width: 420px) {
-    font-size: 16px;
-  }
-
-  @media screen and (min-width: 620px) {
-    font-size: 18px;
-  }
+export const Name = styled.p`
+  font-weight: 700;
 `;
 
 export const Button = styled.button`
   font-size: 14px;
-  height: 24px;
   border-radius: 2px;
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
+  padding: 6px;
   color: ${p => p.theme.colors.orange};
+  background-color: ${p => p.theme.colors.white};
+
   &:hover {
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};

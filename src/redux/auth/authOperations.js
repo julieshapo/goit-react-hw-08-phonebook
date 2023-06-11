@@ -4,11 +4,11 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const setAuthHeader = token => {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+  return (axios.defaults.headers.common.Authorization = `Bearer ${token}`);
 };
 
 const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = '';
+  return (axios.defaults.headers.common.Authorization = '');
 };
 
 export const register = createAsyncThunk(
@@ -42,7 +42,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     await axios.post('/users/logout');
     clearAuthHeader();
   } catch (e) {
-    thunkAPI.rejectWithValue(e.error);
+    return thunkAPI.rejectWithValue(e.error);
   }
 });
 
@@ -61,7 +61,7 @@ export const refreshUser = createAsyncThunk(
       const res = await axios.get('/users/current');
       return res.data;
     } catch (e) {
-      thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue(e.message);
     }
   }
 );

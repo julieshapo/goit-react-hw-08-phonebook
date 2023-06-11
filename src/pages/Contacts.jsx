@@ -4,11 +4,11 @@ import { Filter } from 'components/Filter/Filter';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/contacts/contactsOperations';
-import { selectStatusPending } from 'redux/selectors';
+import { selectIsLoading } from 'redux/selectors';
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectStatusPending);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(getContacts());

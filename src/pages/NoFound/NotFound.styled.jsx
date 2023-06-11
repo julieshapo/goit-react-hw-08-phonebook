@@ -1,0 +1,39 @@
+import styled from 'styled-components';
+import { Link as StyledLink } from 'react-router-dom';
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
+export const Link = styled(StyledLink)`
+  width: 250px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px;
+  font-weight: 700;
+  color: #2a363b;
+
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid ${p => p.theme.colors.gray};
+  text-transform: uppercase;
+  font-weight: 700;
+  color: ${p => p.theme.colors.orange};
+
+  :hover {
+    background-color: ${p => p.theme.colors.orange};
+    color: ${p => p.theme.colors.white};
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid ${p => p.theme.colors.gray};
+  }
+`;

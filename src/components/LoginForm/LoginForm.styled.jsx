@@ -4,6 +4,7 @@ import {
   Form as FormikForm,
   ErrorMessage as FormikErrorMessage,
 } from 'formik';
+import { Link as StyledLink } from 'react-router-dom';
 
 export const Form = styled(FormikForm)`
   width: 320px;
@@ -34,10 +35,37 @@ export const Button = styled.button`
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
+  padding: 8px;
   color: ${p => p.theme.colors.orange};
+  background-color: ${p => p.theme.colors.white};
   margin-bottom: 30px;
 
-  :hover {
+  &:hover {
+    background-color: ${p => p.theme.colors.orange};
+    color: ${p => p.theme.colors.white};
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid ${p => p.theme.colors.gray};
+  }
+`;
+
+export const Link = styled(StyledLink)`
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px;
+  font-weight: 700;
+  color: #2a363b;
+
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid ${p => p.theme.colors.gray};
+  text-transform: uppercase;
+  font-weight: 700;
+  color: ${p => p.theme.colors.orange};
+  margin-left: 10px;
+
+  &:hover {
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);

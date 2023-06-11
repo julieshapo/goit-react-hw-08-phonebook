@@ -11,7 +11,6 @@ export const Layout = () => {
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-      <footer>Made with Love by JS</footer>
       <Toaster />
     </Container>
   );
