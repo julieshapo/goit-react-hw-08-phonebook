@@ -12,11 +12,11 @@ export const Name = styled.p`
 
 export const Button = styled.button`
   font-size: 14px;
-  border-radius: 2px;
-  border: 1px solid ${p => p.theme.colors.gray};
+  border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
   padding: 6px;
+  border: 1px solid ${p => p.theme.colors.gray};
   color: ${p => p.theme.colors.orange};
   background-color: ${p => p.theme.colors.white};
 

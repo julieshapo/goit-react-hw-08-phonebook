@@ -35,7 +35,7 @@ export const ErrorMessage = styled(FormikErrorMessage)`
 
 export const Button = styled.button`
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
@@ -43,6 +43,7 @@ export const Button = styled.button`
   color: ${p => p.theme.colors.orange};
   background-color: ${p => p.theme.colors.white};
   margin-bottom: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background-color: ${p => p.theme.colors.orange};

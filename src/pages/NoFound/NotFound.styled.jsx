@@ -24,16 +24,17 @@ export const Link = styled(StyledLink)`
 
   font-size: 14px;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid ${p => p.theme.colors.gray};
   text-transform: uppercase;
   font-weight: 700;
   color: ${p => p.theme.colors.orange};
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   :hover {
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
-    border: 1px solid ${p => p.theme.colors.gray};
+    border: 1px solid ${p => p.theme.colors.white};
   }
 `;
