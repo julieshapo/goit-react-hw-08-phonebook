@@ -28,7 +28,7 @@ export const Button = styled.button`
   border: 1px solid ${p => p.theme.colors.gray};
   background-color: ${p => p.theme.colors.white};
   color: ${p => p.theme.colors.orange};
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 
   &:hover {
     background-color: ${p => p.theme.colors.orange};

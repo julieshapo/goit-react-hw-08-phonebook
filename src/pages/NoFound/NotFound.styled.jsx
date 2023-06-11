@@ -29,7 +29,7 @@ export const Link = styled(StyledLink)`
   text-transform: uppercase;
   font-weight: 700;
   color: ${p => p.theme.colors.orange};
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 
   :hover {
     background-color: ${p => p.theme.colors.orange};
