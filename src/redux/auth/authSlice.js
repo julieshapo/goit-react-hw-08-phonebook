@@ -25,7 +25,7 @@ const refreshPending = state => {
 };
 
 const refreshFulfilled = (state, action) => {
-  state.user = action.payload.user;
+  state.user = action.payload;
   state.isLoggedIn = true;
   state.isRefreshing = false;
 };

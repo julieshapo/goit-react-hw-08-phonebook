@@ -18,12 +18,10 @@ export const UserMenu = () => {
 
   return (
     <Wrapper>
-      {!isRefreshing && isLoggedIn && <Name>Welcome,_ </Name>}
+      {!isRefreshing && isLoggedIn && <Name>Welcome,{user.name} </Name>}
       <Button type="button" onClick={() => dispatch(logOut())}>
         Log Out
       </Button>
     </Wrapper>
   );
 };
-
-// Welcome, {user.name}
