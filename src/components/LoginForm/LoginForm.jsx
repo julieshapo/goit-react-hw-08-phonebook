@@ -7,10 +7,10 @@ import {
   Label,
   ErrorMessage,
   Field,
-  Button,
   Title,
   Link,
 } from './LoginForm.styled';
+import { ButtonSubmit } from 'components/ButtonSubmit/ButtonSubmit';
 
 const LogInScheme = Yup.object({
   email: Yup.string().email('Invalid email address').required('Required'),
@@ -45,7 +45,7 @@ export const LoginForm = () => {
             <Field type="password" name="password" placeholder="********" />
             <ErrorMessage name="password" component="span" />
           </Label>
-          <Button type="submit">Log In</Button>
+          <ButtonSubmit type="submit">Log In</ButtonSubmit>
         </Form>
       </Formik>
 

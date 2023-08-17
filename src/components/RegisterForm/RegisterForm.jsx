@@ -7,10 +7,10 @@ import {
   Label,
   Field,
   ErrorMessage,
-  Button,
   Title,
   Link,
 } from './RegisterForm.styled';
+import { ButtonSubmit } from 'components/ButtonSubmit/ButtonSubmit';
 
 const RegistrationScheme = Yup.object({
   name: Yup.string()
@@ -53,7 +53,7 @@ export const RegisterForm = () => {
             <Field type="password" name="password" placeholder="********" />
             <ErrorMessage name="password" component="span" />
           </Label>
-          <Button type="submit">Register</Button>
+          <ButtonSubmit type="submit">Register</ButtonSubmit>
         </Form>
       </Formik>
 

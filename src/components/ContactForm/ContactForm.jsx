@@ -9,10 +9,10 @@ import {
   Form,
   Field,
   ErrorMessage,
-  Button,
   Title,
 } from './ContactForm.styled';
 import { selectContacts } from 'redux/selectors';
+import { ButtonSubmit } from 'components/ButtonSubmit/ButtonSubmit';
 
 const ContactScheme = Yup.object().shape({
   name: Yup.string()
@@ -59,7 +59,7 @@ export const ContactForm = () => {
             <Field name="number" placeholder="111-11-11" autoComplete="off" />
             <ErrorMessage name="number" component="span" />
           </FormLabel>
-          <Button type="submit">Add contact</Button>
+          <ButtonSubmit type="submit">Add contact</ButtonSubmit>
         </Form>
       </Formik>
     </div>
